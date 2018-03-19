@@ -56,7 +56,7 @@ while (my $row = $csv->getline($fh)) {
             }
             
             # INT or BIGINT
-            elsif ($value =~ /^[\-]*[0-9]+$/ && $value < 9223372036854775807) { # Even BIGINT's are not that bigger!
+            elsif ($value =~ /^[\-]*[0-9]+$/ && $value < 9223372036854775807) { # Even BIGINT's are not that big!
                 if ($value >= -2147483648 && $value <= 2147483647) {
                     $currentValueType = 'INT';
                 } else {
